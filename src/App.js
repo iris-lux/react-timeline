@@ -5,21 +5,20 @@ import timelineData from './data/timeline.json';
 import Timeline from './components/Timeline';
 import TimelineEvent from './components/TimelineEvent';
 
+
+
 function App() {
-  console.log(timelineData);
+  
 
   // Customize the code below
   return (
     <div className="App">
-      <TimelineEvent
-      person="Ada Lovelace"
-      status="The Original programmer... old-school style, on PAPER."
-      timeStamp="2018-05-18T22:12:03Z" />)
-
+      <p></p>
       <header className="App-header">
-        <h1 className="App-title">Application title</h1>
+        <h1 className="App-title">{timelineData.person}'s Timeline</h1>
       </header>
       <main className="App-main">
+        <Timeline events = {timelineData.events}/>
       </main>
     </div>
   );
